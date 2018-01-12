@@ -1,0 +1,18 @@
+import math
+number = 13195
+sqrt = math.sqrt(number)
+
+# find factors
+factors = []
+for i in range (2,int(math.ceil(sqrt))):
+    if number % i == 0:
+        factors.append(i)
+# prime factors
+for factor in factors:
+    is_prime = True
+    for new_factor in range (2,int(math.ceil(math.sqrt(factor)) + 1)):
+            if factor % new_factor == 0:
+                factors.remove(factor)
+# max prime factor
+len(factors)-1
+print(factors)
