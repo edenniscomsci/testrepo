@@ -14,5 +14,4 @@ for factor in factors:
             if factor % new_factor == 0:
                 factors.remove(factor)
 # max prime factor
-len(factors)-1
-print(factors)
+print(factors[len(factors) - 1])
