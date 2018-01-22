@@ -1,0 +1,12 @@
+from random import randint
+random  = []
+sort = []
+#making random list 
+for i in range (1000):
+    random.append(randint(0, 100))
+print(random)
+#sorting random list (selection)
+while len(random) > 0:
+    sort.append(min(random))
+    random.remove(min(random))
+print(sort)
