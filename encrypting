@@ -1,0 +1,15 @@
+import string
+
+alpha_list = list(string.ascii_lowercase)
+print(alpha_list)
+
+#make dictionary
+alphabet = {}
+
+#add things to dictionary
+i = 2
+for letter in alpha_list:
+    print (letter, i)
+    alphabet[letter] = i
+    i += 1
+print(alphabet)
