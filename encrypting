@@ -13,3 +13,12 @@ for letter in alpha_list:
     alphabet[letter] = i
     i += 1
 print(alphabet)
+#encrypt 's'
+s = 'According to all known laws of aviation, there is no way a bee should be able to fly. Its wings are too small to get its fat little body off the ground. the bee, of course, flies anyway because bees dont care what humans think is impossible.'
+print(list(s))
+l = list(s)
+bee = []
+for letter in l:
+    if letter.isalpha() == True
+        bee.append(letter.lower())
+        print(bee)
