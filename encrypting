@@ -19,6 +19,7 @@ print(list(s))
 l = list(s)
 bee = []
 for letter in l:
-    if letter.isalpha() == True
-        bee.append(letter.lower())
-        print(bee)
+    if letter.isalpha() == True:
+        #bee.append(letter.lower())
+        bee.append(alphabet.get(letter.lower()))
+print(bee)
