@@ -1,0 +1,5 @@
+new = {}
+for key in alphabet:
+    print(key, alphabet[key])
+    new[alphabet[key]] = key
+print(new)
