@@ -1,0 +1,36 @@
+import string
+#name dictionary
+names = {}
+names['john'] = 'smith'
+names['bob'] = 'green'
+print(names)
+
+#binary dictionary
+binary = {}
+i = 1
+for number in range(8):
+    binary[number] = str(bin(i)[2:])
+    i += 1
+print(binary)
+
+#movies dictionary
+movies = {}
+movies['spiderman'] = '10'
+movies['HSM2'] = '10'
+print(movies)
+
+#alphabet dictionary
+alphabet = {}
+alpha_list = list(string.ascii_lowercase)
+i = 1
+for letter in alpha_list:
+    alphabet[letter] = i
+    i += 1
+print(alphabet)
+#test
+final = []
+final.append(names)
+final.append(binary)
+final.append(movies)
+final.append(alphabet)
+print(final)
