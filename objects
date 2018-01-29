@@ -1,0 +1,15 @@
+#objects
+class Fractions:
+    numer = ""
+    denom = ""
+    
+    def __init__(self, numer, denom):
+        self.numer = numer
+        self.denom = denom
+
+    def makeFractions(self):
+        print(str(self.numer) + "/" + str(self.denom))
+fraction = Fractions("numer", "denom")
+fraction.makeFractions()
+#adding strings
+#str() + str()
