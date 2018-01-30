@@ -1,15 +1,32 @@
 #objects
+#turn numer and denom into integers
+
+#display as mixed numers
+import math
+import random
 class Fractions:
-    numer = ""
-    denom = ""
+    numer = 0
+    denom = 0
     
     def __init__(self, numer, denom):
         self.numer = numer
         self.denom = denom
 
-    def makeFractions(self):
+    def makeFract(self):
         print(str(self.numer) + "/" + str(self.denom))
-fraction = Fractions("numer", "denom")
-fraction.makeFractions()
+    def addFract(self):
+        mutliply denom1 by denom2 (d3)
+        mutiply numer1 by denom2 (n1)
+        mutliply numer2 by denom1 (n2)
+        make d3 the new denom
+        add n1 and n2 (n3)
+        make n3 the new numer
+
+numer = random.randint(1, 10)
+denom = random.randint(1, 10)
+fraction = Fractions(numer, denom)
+fraction.makeFract()
+print(fraction.makeFract())
+#add subtract
 #adding strings
 #str() + str()
