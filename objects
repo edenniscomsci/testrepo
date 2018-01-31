@@ -1,7 +1,5 @@
 #objects
-#turn numer and denom into integers
-
-#display as mixed numers
+#add
 import math
 import random
 class Fractions:
@@ -14,19 +12,30 @@ class Fractions:
 
     def makeFract(self):
         print(str(self.numer) + "/" + str(self.denom))
-    def addFract(self):
-        mutliply denom1 by denom2 (d3)
-        mutiply numer1 by denom2 (n1)
-        mutliply numer2 by denom1 (n2)
-        make d3 the new denom
-        add n1 and n2 (n3)
-        make n3 the new numer
+    def addFract(self, fraction):
+        newDenom = self.denom * fraction.denom
+        Numer1 = self.numer * fraction.denom
+        Numer2 = fraction.numer * self.denom
+        newNumer = Numer1 + Numer2
+        print(str(newNumer / newDenom) + " " + str(newNumer % newDenom) + "/" + str(newDenom))
 
-numer = random.randint(1, 10)
-denom = random.randint(1, 10)
-fraction = Fractions(numer, denom)
-fraction.makeFract()
-print(fraction.makeFract())
-#add subtract
-#adding strings
-#str() + str()
+#subtract
+    def subFract(self, fraction):
+        newDenom = self.denom * fraction.denom
+        Numer1 = self.numer * fraction.denom
+        Numer2 = fraction.numer * self.denom
+        newNumer = Numer2 - Numer1
+        print(str(newNumer / newDenom) + " " + str(newNumer % newDenom) + "/" + str(newDenom))
+
+#simplify
+
+numerator = random.randint(1, 10)
+denominator = random.randint(1, 10)
+newNumer = random.randint(1, 10)
+newDenom = random.randint(1, 10)
+f1 = Fractions(numerator, denominator)
+f2 = Fractions(newNumer, newDenom)
+f1.makeFract()
+f2.makeFract()
+f2.addFract(f1)
+f2.subFract(f1)
