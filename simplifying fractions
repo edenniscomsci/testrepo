@@ -1,0 +1,7 @@
+# x/y
+str(numerator) + "/" + str(denominator)
+
+# x y/z
+str(newNumer / newDenom) + " " + str(newNumer % newDenom) + "/" + str(newDenom)
+
+# decimal
