@@ -2,6 +2,9 @@
 str(numerator) + "/" + str(denominator)
 
 # x y/z
-str(newNumer / newDenom) + " " + str(newNumer % newDenom) + "/" + str(newDenom)
+str(numerator / denominator) + " " + str(numerator % denominator) + "/" + str(denominator)
 
 # decimal
+float(numerator) / float(denominator)
+
+#simplified 
