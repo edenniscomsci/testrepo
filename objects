@@ -42,9 +42,9 @@ class Fractions:
         print(str(newNumer) + "/" + str(newDenom))
 #simplification
     def simpFract(self):
-        x = gcd(int(self.numer), int(self.denom))
-        Numer = self.numer / x
-        Denom = self.denom / x
+        x = gcd(int(newNumer), int(newDenom))
+        Numer = newNumer / x
+        Denom = newDenom / x
         print(str(Numer) + "/" + str(Denom))
 numerator = random.randint(1, 10)
 denominator = random.randint(1, 10)
@@ -58,5 +58,5 @@ f2.addFract(f1)
 f2.subFract(f1)
 f2.multFract(f1)
 f2.divFract(f1)
-f1.simpFract()
 f2.subFract(f1)
+f2.simpFract()
