@@ -1,0 +1,41 @@
+public class Node{
+
+     int value;
+     Node left;
+     Node right;
+     public static void main(String []args){
+     
+     }
+     
+     public Node(){
+         
+     }
+     public Node getLeft(int a){
+         return left;
+     }
+     
+     public Node getRight(int b){
+         return right;
+     }
+     
+     public void setRight(Node x){
+         left = x;
+     }
+     
+     public void setLeft(Node y){
+         right = y;
+     }
+     
+     public int getValue(){
+         return value;
+     }
+}
+/*Node one = newNode();
+     one.setvalue(1);
+Node two = newNode();
+     two.setvalue(2);
+Node three = newNode();
+     three.setvalue(3);
+     one.setleft(two);
+     one.setright(three);
+     one.getleft().getvalue(): */
