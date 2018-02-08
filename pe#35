@@ -1,0 +1,10 @@
+from random import randint
+val = randint(2, 1000)
+
+number = list(str(val))
+print number
+
+
+for i in range len(number + 1):
+    number += [number.pop(0)]
+    print number
