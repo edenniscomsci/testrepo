@@ -1,13 +1,9 @@
-from random import randint
+ffrom random import randint
 
-val = randint(2, 400)
+val = randint(2, 4000000)
 number = list(str(val))
 print number
 
-#for i in range len[number] - 1:
-#kept getting invlid syntax for ^^
-number += [number.pop(0)]
-print number
-number += [number.pop(0)]
-print number
-print(len(number))
+for i in range(len(number) - 1):
+    number += [number.pop(0)]
+    print "".join(number)
