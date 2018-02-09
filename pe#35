@@ -1,13 +1,17 @@
-ffrom random import randint
+from random import randint
 
 val = randint(2, 4000000)
 number = list(str(val))
+circPrime = []
 print number
 
 for i in range(len(number) - 1):
     number += [number.pop(0)]
+    circPrime.append("".join(number))
     print "".join(number)
 
+print(circPrime)
+print(len(circPrime))
 from random import randint
 import math
 prime = []
