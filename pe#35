@@ -1,4 +1,5 @@
 import math
+answer = []
 #find prime numbers
 def isPrime(x):
     for j in range(2, int(math.sqrt(x)+1)):
@@ -7,14 +8,20 @@ def isPrime(x):
     return True
 
 #prime number switcharoo
+k = 2
 def circular(number):
+    global k
     number = list(str(number))
     for i in range(len(number)):
         number += [number.pop(0)]
         a = int("".join(number))
         if not isPrime(a):
             return False
-    return True
+    k = k + 1
 
-for i in range(2, 100):
-    print(circular(i))
+for i in range(6, 1000000, 6):
+    if isPrime(i + 1):
+        circular(i + 1)
+    if isPrime(i -1):
+        circular(i - 1)
+print(k)
