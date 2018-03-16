@@ -1,0 +1,68 @@
+package com.example.erysjanetdennis.myapplication;
+
+/**
+ * Created by erysjanetdennis on 3/14/18.
+ */
+
+public class test{
+
+    int age;
+    String name;
+
+    public static void main(String[] args) {
+        int [] intArray;
+
+
+        test one = new test();
+        one.setAge(16);
+        one.setName("erys");
+
+        test two = new test();
+        two.setAge(3);
+        two.setName("");
+
+        test three = new test();
+        three.setName();
+        three.setAge();
+
+        test four = new test();
+        four.setAge();
+        four.setName();
+
+    }
+        //method to set an age
+    public int setAge(int age){
+        return age;
+    }
+        //method to set a name
+    public String setName(String name){
+        return "";
+    }
+    private static void print(String input) {
+        System.out.println(input);
+    }
+}
+
+
+/*
+create an integer set to age
+create a string set first name
+create an object, using functions, to call age and name
+create an array of four of these objects (diff values)
+switch paces of two of them (w/o losing data)
+print out name and ages of all (w/ for loop)
+print out the name of each who's age equals mine
+grab the third and print out the name while the age is less than 30
+    use a while loop
+    add one to the age everytime
+
+public int min(int [] unsorted_list){
+    int temp = unsorted_list[0];
+    for(int i = 1; i < unsorted_list.length;i++){
+        if(unsorted_list[i] < temp){
+            temp = unsorted_list[i];
+        }
+    }
+    return temp;
+}
+ */
