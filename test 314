@@ -4,40 +4,51 @@ package com.example.erysjanetdennis.myapplication;
  * Created by erysjanetdennis on 3/14/18.
  */
 
+import java.util.Random;
+
+
 public class test{
 
     int age;
     String name;
 
     public static void main(String[] args) {
-        int [] intArray;
-
-
-        test one = new test();
-        one.setAge(16);
-        one.setName("erys");
-
-        test two = new test();
-        two.setAge(3);
-        two.setName("");
-
-        test three = new test();
-        three.setName();
-        three.setAge();
-
-        test four = new test();
-        four.setAge();
-        four.setName();
-
+        test [] personArray = new test[4];
+        Random rand = new Random();
+            //sets ages and names
+       for (int i = 0; i < personArray.length; i++){
+            personArray[i] = new test();
+            personArray[i].age = rand.nextInt(31) + 1;
+            personArray[i].name = "student" + i;
+            print("age: " + personArray[i].age + " name: " + personArray[i].name);
+        }
+            //switches around first two items
+        test temp;
+        temp = personArray[1];
+        personArray[1] = personArray[0];
+        personArray[0] = temp;
+            //prints new list
+        for (int j = 0; j < personArray.length; j++) {
+            print("" + personArray[j].age);
+        }
+            //finds person whose age is 16
+        for (int m = 0; m < personArray.length; m++){
+            int key = 16;
+           if (personArray[m].age ==  key){
+                print("" + personArray[m].name);
+            }
+            else {
+                print("none");
+            }
+        }
+            //test to see if the third person is less than 30 and adds 1 to their age
+        while(personArray[2].age < 30){
+            print(personArray[2].name + " is less than 30");
+            personArray[2].age = personArray[2].age + 1;
+            print("age + 1: " + personArray[2].age);
+        }
     }
-        //method to set an age
-    public int setAge(int age){
-        return age;
-    }
-        //method to set a name
-    public String setName(String name){
-        return "";
-    }
+    
     private static void print(String input) {
         System.out.println(input);
     }
@@ -64,5 +75,37 @@ public int min(int [] unsorted_list){
         }
     }
     return temp;
+    
+    test one = new test();
+        one.setAge(16);
+        one.setName("erys");
+
+    personArray[0] = new test();
+        personArray[0].age = 16;
+        personArray[0].name = "erys";
+        
+        print("" + personArray[0].age);
+        print(personArray[0].name);
 }
+
+    //method to set an age
+    public int setAge(int age){
+        return age;
+    }
+        //method to set a name
+    public String setName(String name){
+        return "";
+    }
+    
+    //prints out age
+        for (int i = 0; i < personArray.length; i++) {
+        personArray[i] = new test();
+        personArray[i].age = rand.nextInt(31) + 1;
+        print("age: " + personArray[i].age);
+        }
+            //print out "names"
+        for (int k = 0; k < personArray.length; k++){
+            personArray[k].name = "student" + k;
+            print("name: " + personArray[k].name);
+        }
  */
