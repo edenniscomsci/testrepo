@@ -2,20 +2,20 @@ import java.util.*;
 
 public class HelloWorld{
      public static void main(String []args){
+        Map<String, String> map = new HashMap<>();
         String sentence = "thi3s i4s a1 te2st";
         String [] old_split = sentence.split("[\\s+]");
         
         for (int i = 0; i < old_split.length; i++){
             char [] result = old_split[i].toCharArray();
             for (int j = 0; j < result.length; j++){
-                print("" + result[j]);
-                char jack = result[j];
                 if (result[j] >= '0' && result[j] <= '9'){
-                    String jane = result[j].replaceAll("[^0-9]+", " ");
+                            map.put("" + result[j], old_split[i]);
+                            print(""+ result[j] + ": " + map.get("" + result[j]));
+                        }
                 }
             }
-        }
-     }
+        } 
      private static void print(String input) {
         System.out.println(input);
     }
