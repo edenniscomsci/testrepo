@@ -1,22 +1,100 @@
 import java.util.*;
 
-public class HelloWorld{
-     public static void main(String []args){
+public class hmwk{
+    public static void main(String []args){
         Map<String, String> map = new HashMap<>();
         String sentence = "thi3s i4s a1 te2st";
         String [] old_split = sentence.split("[\\s+]");
-        
+
         for (int i = 0; i < old_split.length; i++){
             char [] result = old_split[i].toCharArray();
             for (int j = 0; j < result.length; j++){
                 if (result[j] >= '0' && result[j] <= '9'){
-                            map.put("" + result[j], old_split[i]);
-                            print(""+ result[j] + ": " + map.get("" + result[j]));
-                        }
+                    //print("" + result[j]);
+                    map.put("" + result[j], old_split[i]);
+                    //print(""+ result[j] + ": " + map.get("" + result[j]));
                 }
             }
-        } 
-     private static void print(String input) {
-        System.out.println(input);
+        }
+        for (int k = 0; k < old_split.length; k++){
+            print(map.get("" + (k +1)) + " ");
+        }
+    }
+    private static void print(String input) {
+        System.out.print(input);
     }
 }
+
+/*
+consecutive
+b/t 1-9 (not always going to be all 9)
+if not 9, the amount of numbers (max #) will be = to the length of the list
+going to be in a word
+
+variable:
+declare type (str, int, char.....)
+
+functions:
+declare class  type (public, private, void, static)
+declare type (int, string, char......)
+
+loops:
+for (set range)
+whlie (booolean)
+
+data structures:
+objects
+list
+dictionaries
+
+
+
+
+
+
+Given strings with integers
+such as "Th1is is2 a3 t4est"
+where each word has a number,
+place each word in consecutive number order,
+numbers given are from 1-9, but may not
+be the full set until 9
+the numbers given will be consecutive
+the numbers given will start at 1, not 0, or any other number
+
+String sentence =  "th1is i2s a3 t4est";
+        String[] old_split = sentence.split("[\\s+]");
+
+                for (int i = 0; i < old_split.length; i++){
+                    String[] split2 = old_split[i].split("");
+            print(split2[i]);
+
+                }
+
+            }
+String str = "erys";
+String str2 = "janet";
+String str3 = "dennis";
+
+String [] one = str.split("");
+String [] two = str2.split("");
+String [] three = str3.split("");
+
+
+map.put("e", one );
+map.put("j", two );
+map.put("d", three );
+
+for (int i = 0; i < one.length; i++){
+    print(one[i]);
+}
+for (int i = 0; i < two.length; i++){
+    print(two[i]);
+}
+for (int i = 0; i < map.get("e").length; i++){
+    print(map.get("e")[i]);
+}
+
+
+
+
+ */
