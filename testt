@@ -2,20 +2,23 @@ import java.util.*;
 
 public class hmwk{
     public static void main(String []args){
+        //creates dictionaries and variables
         Map<String, String> map = new HashMap<>();
         String sentence = "thi3s i4s a1 te2st";
+        //splits the sentence into words
         String [] old_split = sentence.split("[\\s+]");
-
+        //splits the words into characters
         for (int i = 0; i < old_split.length; i++){
             char [] result = old_split[i].toCharArray();
+        //makes the key and value for the dictionary 
+        //key = the number in the word; value = the word
             for (int j = 0; j < result.length; j++){
                 if (result[j] >= '0' && result[j] <= '9'){
-                    //print("" + result[j]);
                     map.put("" + result[j], old_split[i]);
-                    //print(""+ result[j] + ": " + map.get("" + result[j]));
                 }
             }
         }
+        //prints out the dictionary in numerical order so that it form a sentence
         for (int k = 0; k < old_split.length; k++){
             print(map.get("" + (k +1)) + " ");
         }
@@ -24,7 +27,6 @@ public class hmwk{
         System.out.print(input);
     }
 }
-
 /*
 consecutive
 b/t 1-9 (not always going to be all 9)
