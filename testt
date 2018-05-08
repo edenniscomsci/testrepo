@@ -1,0 +1,216 @@
+import java.util.*;
+public class testt {
+
+    //makes the grade variables for each class
+    int grade1;
+    int grade2;
+
+    public static void main(String[] args) {
+        //creates dictionary and random# object
+        Map<String, List> map = new HashMap<>();
+        Random rand = new Random();
+
+        //making the class/subject objects
+        testt math = new testt();
+        testt hist = new testt();
+        testt lit = new testt();
+
+        testt math2 = new testt();
+        testt hist2 = new testt();
+        testt lit2 = new testt();
+
+        testt math3 = new testt();
+        testt hist3 = new testt();
+        testt lit3 = new testt();
+        //math grades
+        math.grade1 = rand.nextInt(100) + 20;
+        math.grade2 = rand.nextInt(100) + 20;
+
+        math2.grade1 = rand.nextInt(100) + 20;
+        math2.grade2 = rand.nextInt(100) + 20;
+
+        math3.grade1 = rand.nextInt(100) + 20;
+        math3.grade2 = rand.nextInt(100) + 20;
+        //hist grades
+        hist.grade1 = rand.nextInt(100) + 20;
+        hist.grade2 = rand.nextInt(100) + 20;
+
+        hist2.grade1 = rand.nextInt(100) + 20;
+        hist2.grade2 = rand.nextInt(100) + 20;
+
+        hist3.grade1 = rand.nextInt(100) + 20;
+        hist3.grade2 = rand.nextInt(100) + 20;
+        //lit grades
+        lit.grade1 = rand.nextInt(100) + 20;
+        lit.grade2 = rand.nextInt(100) + 20;
+
+        lit2.grade1 = rand.nextInt(100) + 20;
+        lit2.grade2 = rand.nextInt(100) + 20;
+
+        lit3.grade1 = rand.nextInt(100) + 20;
+        lit3.grade2 = rand.nextInt(100) + 20;
+
+        //mathe the list of averages of the class grades
+        //(JANE)
+        List <String> course1 = new ArrayList();
+        course1.add("math: " + math.classAvg());
+        course1.add("hist: " + hist.classAvg());
+        course1.add("lit: " + lit.classAvg());
+
+        //(ADONDE)
+        List <String> course2 = new ArrayList();
+        course2.add("math: " + math2.classAvg());
+        course2.add("hist: " + hist2.classAvg());
+        course2.add("lit: " + lit2.classAvg());
+
+        //(BLAKE)
+        List <String> course3 = new ArrayList();
+        course3.add("math: " + math3.classAvg());
+        course3.add("hist: " + hist3.classAvg());
+        course3.add("lit: " + lit3.classAvg());
+
+        //puts it into the dictionary
+        map.put("jane", course1);
+        map.put("adonde", course2);
+        map.put("blake", course3);
+
+        //prints out names and their class averages
+        print("jane: " + map.get("jane"));
+        print("adonde: " + map.get("adonde"));
+        print("blake: " + map.get("blake"));
+
+        //claculate GPA
+        //(JANE)
+        int a = math.grade1 + math.grade2 + hist.grade1 + hist.grade2 + lit.grade1 + lit.grade2;
+        int GPA = a/6;
+        print("GPA1: " + GPA);
+
+        //(ADONDE)
+        int t = math2.grade1 + math2.grade2 + hist2.grade1 + hist2.grade2 + lit2.grade1 + lit2.grade2;
+        int GPA2 = t/6;
+        print("GPA2: " + GPA2);
+
+        //(BLAKE)
+        int s = math3.grade1 + math3.grade2 + hist3.grade1 + hist3.grade2 + lit3.grade1 + lit3.grade2;
+        int GPA3 = s/6;
+        print("GPA3: " + GPA3);
+
+        //puts GPA into 4.0 scale
+        //(JANE)
+        if (GPA >= 90){
+            print("jane has GPA: 4.0");
+        }
+        if (GPA < 90 && GPA >= 80){
+            print("jane has GPA: 3.0");
+        }
+        if (GPA < 80 && GPA >= 70){
+            print("jane has GPA: 2.0");
+        }
+        if (GPA < 70 && GPA >= 60){
+            print("jane has GPA: 1.0");
+        }
+        if (GPA <= 59){
+            print("jane has GPA: 0.0");
+        }
+
+        //(ADONDE)
+        if (GPA2 >= 90){
+            print("adonde has GPA: 4.0");
+        }
+        if (GPA2 < 90 && GPA2 >= 80){
+            print("adonde has GPA: 3.0");
+        }
+        if (GPA2 < 80 && GPA2 >= 70){
+            print("adonde has GPA: 2.0");
+        }
+        if (GPA2 < 70 && GPA2 >= 60){
+            print("adonde has GPA: 1.0");
+        }
+        if (GPA2 <= 59){
+            print("adonde has GPA: 0.0");
+        }
+
+        //(BLAKE)
+        if (GPA3 >= 90){
+            print("blake has GPA: 4.0");
+        }
+        if (GPA3 < 90 && GPA3 >= 80){
+            print("blake has GPA: 3.0");
+        }
+        if (GPA3 < 80 && GPA3 >= 70){
+            print("blake has GPA: 2.0");
+        }
+        if (GPA3 < 70 && GPA3 >= 60){
+            print("blake has GPA: 1.0");
+        }
+        if (GPA3 <= 59){
+            print("blake has GPA: 0.0");
+        }
+    }
+    //gets the 1st grade
+    public int getGrade1(){
+        return grade1;
+    }
+    //gets the second grade
+    public int getGrade2() {
+        return grade2;
+    }
+    //calculates the class avg
+    public int classAvg(){
+        int k = grade1 + grade2;
+        int avg = k/2;
+        return avg;
+    }
+
+    private static void print(String input) {
+
+        System.out.println(input);
+    }
+}
+/*
+make a dictionary
+    key: name
+    value: list of classes (3)
+each class is an object
+    parameter: grades (2)
+make function to calculate average grade per class
+make function to calculate GPA per student and print it out
+COMMENTS!!!
+due Apr 24
+
+//puts GPA into 4.0 scale
+    if (GPA >= 90){
+        return "jane has GPA: 4";
+    }
+    if (GPA < 90 && GPA >= 80){
+        print("jane has GPA: 3");
+    }
+    if (GPA < 80 && GPA >= 70){
+        print("jane has GPA: 2");
+    }
+    if (GPA < 70 && GPA >= 60){
+        print("jane has GPA: 1");
+    }
+    if (GPA <= 59){
+        print("jane has GPA: 0");
+    }
+ public int student2GPA(){
+    testt math2 = new testt();
+    testt hist2 = new testt();
+    testt lit2 = new testt();
+
+    int t = math2.grade1 + math2.grade2 + hist2.grade1 + hist2.grade2 + lit2.grade1 + lit2.grade2;
+    int GPA = t/6;
+    return GPA;
+}
+
+public int student3GPA(){
+    testt math3 = new testt();
+    testt hist3 = new testt();
+    testt lit3 = new testt();
+
+    int s = math3.grade1 + math3.grade2 + hist3.grade1 + hist3.grade2 + lit3.grade1 + lit3.grade2;
+    int GPA = s/6;
+    return GPA;
+}
+ */
